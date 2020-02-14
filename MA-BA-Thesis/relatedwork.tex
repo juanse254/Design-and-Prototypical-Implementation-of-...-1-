@@ -38,12 +38,11 @@ Another important area from the DialogFlow API is the REST backend provided by g
 
 Finally, among the capabilities of the DialogFlow API we have composite entities and context which can aid the work of identifying subsections of entities and furthermore using the context to track a conversation within a set of responses using intents. This will be detailed in the development but is worth mentioning since most of the API is build upon this topics.
 
-\section{Natural Language Understanding}
+\section{Natural Language Understanding (NLU)}
 what Nartual language understanding is and why do we need it.
 
-\chapter{Related Works}
-
-There are several related works that train to aim to recreate or at least up to certain extent achieve a similar solution as the one proposed. In order to understand one of the closest paper in terms of content and approach we can have a look at Jacob's \cite{networkIntents} paper on Refining Network Intents for Self-Driving Networks which aims to use natural language to perform entity extraction and thus allow to create intents based on the extracted entities to perform certain operations. This is quite related to our work since it used DialogFlow as a basis as well and extended its usage with an intent mapper in order to allow users which have a median or low understanding of computer networking to use and create intents based on a relatively simple pipeline which allows to create entity extraction as a service.
+\chapter{Related Work}
+There are several related work that train to aim to recreate or at least up to certain extent achieve a similar solution as the one proposed. In order to understand one of the closest paper in terms of content and approach we can have a look at Jacob's \cite{networkIntents} paper on Refining Network Intents for Self-Driving Networks which aims to use natural language to perform entity extraction and thus allow to create intents based on the extracted entities to perform certain operations. This is quite related to our work since it used DialogFlow as a basis as well and extended its usage with an intent mapper in order to allow users which have a median or low understanding of computer networking to use and create intents based on a relatively simple pipeline which allows to create entity extraction as a service.
 
 The process described by Jacob uses google assistant to extract entities from the utterances and pre processes them into Nile. Nile is a intent translator that aims to try to gather entity information and map this to actual intents that can be performed by and android system. Once nile has completed the task this is later on passed on to the Intent Deployer who must deploy the service itself and finally deploy a network policy based on the previous intents. Throughout the process several important areas are described, for example the machine learning model which contains Nile as a decoder. Within this area, the encoder tries to identify the input entities which are then transfered through the Thought vector to the Decoder. The Decoder will aim to create an intent based on the extracted entities and output this to the intent creator.
 
@@ -69,15 +68,16 @@ In a different area we are also presented some interesting aspects of how chatbo
 
 They propose a theory which is used in most chatbots now a days, thus we use intents to map input to contexts and once this intent is recognized we can performs entity extraction to gather the important elements from the conversation leaving aside the facts that are not crucial for the implementation. In this way, the paper introduces B-Point Tree which outperforms the BST tree used in NLP Classifiers as supervised training which is the common technique used in chatbots. With this approach it is easier to infer the context and map the entities to the intents since you may have many intents to a single context.
 
-\section{Network Tools that aim to help the SysAdmin}
+\section{Cybersecurity Solutions}
 
-Sula gathered information about protection services for a subset of types of attack and generated recommendations based on this. This relates to our work as it might contain several pieces of information that help us to extend our service past the gathering of requirements and delivery of information. In his work Sula gathered a table containing a set of services and a relative reference pricerange which could be used to map possible entity extraction outcomes to possible solution tools. The table from Sula \cite{recomendationSystem} gathered the following elements:
+Sula \cite{recomendationSystem} gathered information about protection services for a subset of types of attack and generated recommendations based on this. This relates to our work as it might contain several pieces of information that help us to extend our service past the gathering of requirements and delivery of information. In his work Sula gathered a table containing a set of services and a relative reference pricerange which could be used to map possible entity extraction outcomes to possible solution tools. The table from Sula \cite{recomendationSystem} gathered the following elements:
 
 
 \begin{table}[h]
 \centering
 \caption{Services and Pricing from Sula \cite{recomendationSystem}}
-\begin{tabularx}{\textwidth}{|l|l|l|l|}
+\resizebox{\textwidth}{!}{%
+\begin{tabularx}{\textwidth}{|l|l|l|l}
 \hline
 Provider               & Service                         & Pricing                                    & Deployment              \\ 
 \hline
@@ -98,6 +98,7 @@ Flowmon                & DDoS Defender                   & Free Trial           
 Akamai                 & Kona Site Defender              & approx. \$6000 per month, \$3000 for setup & Cloud based             \\
 \hline
 \end{tabularx}
+}
 \end{table}
 
 Here we can see a set of element that could be used to expand and use in our chatbot and can still can cause a beneficial impact on the system administrator experience. It is very important to mark that from this table not all elements are described in detail and not all solutions can be used to be mapped to all problems and thus there are underlying limitations.

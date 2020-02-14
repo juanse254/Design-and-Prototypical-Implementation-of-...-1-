@@ -19,7 +19,47 @@
 \usepackage{float}
 \usepackage{url}
 \usepackage{tabularx}
-\usepackage{unizhdt-MA} 
+\usepackage{unizhdt-MA}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage[thinlines]{easytable}
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+
+\lstdefinelanguage{json}{
+    basicstyle=\fontsize{8}{8}\selectfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    %backgroundcolor=white,
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -36,7 +76,7 @@
 % Define the author printed on the cover page
 \author{Sebastian Sanchez}
 % Define the city and country of the author
-\authorcity{Zurich, Switzerland}
+\authorcity{Z\"urich, Switzerland}
 % Define the student ID (Matrikelnummer)
 \studentid{17-732-710}
 % Define the title with optional subtitle
@@ -45,7 +85,7 @@
 % Define the supervisors
 \supervisors{Muriel Franco, Eder Scheid}
 % Define the submission date
-\submissiondate{January 30, 2019}
+\submissiondate{February 30, 2019}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
